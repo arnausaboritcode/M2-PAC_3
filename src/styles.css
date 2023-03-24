@@ -68,7 +68,8 @@ nav ul li a{
 
 nav ul li a .is-active, nav ul li a:hover {
   background-color: red;
-  border: 2px solid #fff;
+ 
+  
 
 }
 
@@ -186,7 +187,7 @@ text-align: center;
 
 }
 
-.content h1:hover {
+.hero .content h1:hover {
   -webkit-text-stroke: 2px #fff;
   color: transparent;
 
@@ -304,18 +305,21 @@ text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-}
-
-.row .col:hover {
-  transform: scale(1.1);
-  transition: 0.4s ease;
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  box-shadow: 0px 15px 20px -15px rgba(0, 0, 0, 0.1), 0 55px 50px -35px rgba(0, 0, 0, 0.1), 0 85px 60px -25px rgba(0, 0, 0, 0.1),0 -20px 60px -25px rgba(0, 0, 0, 0.1), 20px 0px 60px -25px rgba(0, 0, 0, 0.1), -20px 0px 60px -25px rgba(0, 0, 0, 0.1) ;
   
 }
 
+.row .col:hover {
+  transition: 1s ease;
+  transition-delay: 0.15s;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 5px 3px -5px rgba(0, 0, 0, 0.3), 0 2px 8px -5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+
+}
+
 .row .col:hover img {
-  transform: rotateZ(-5deg);
+
   transition: 0.4s ease;
   
   
@@ -329,12 +333,11 @@ text-align: center;
 }
 
 .row .col:not(:hover) {
-  transform: scale(1);
   transition: 0.4s ease;
 }
 
 .introduction .row{
-  margin-top: 80px;
+  margin-top: 5%;
 
 }
 
@@ -349,13 +352,19 @@ text-align: center;
 
 .introduction a {
   margin: 30px;
-  color: #fff;
+  color: black;
   font-size: 16px;
-  border: 2px solid #fff;
+  border: 2px solid black;
   padding: 8px 40px;
   border-radius: 50px;
   text-decoration: none;
+ 
+}
+
+.introduction a:hover {
+  color: #fff;
   background-color: red;
+  border: 2px solid #fff;
 }
 
 /* index.html -Portada body responsive*/
@@ -374,6 +383,7 @@ text-align: center;
   }
  
 }
+
 
 /* Ultima Portada index.html*/
 
@@ -397,10 +407,6 @@ text-align: center;
 
 }
 
-.explora .content h1:hover {
-  -webkit-text-stroke: 0.5px #fff;
-  color: transparent;
-}
 
 .explora .content .line {
   margin-bottom: 50px;
@@ -414,6 +420,7 @@ text-align: center;
 
   .explora .content>h1{
     display: block;
+    padding-top: 80px;
    }
 
 
@@ -468,7 +475,11 @@ text-align: center;
 .galeriaimg img {
   width: 350px;
   margin: 20px;
+  height: 20%;
+
 }
+
+
 
 .colcontent a {
   margin-top: 40px;
@@ -479,6 +490,10 @@ text-align: center;
   border-radius: 50px;
   text-decoration: none;
   background-color: red;
+}
+
+.colcontent p{
+  line-height: 1.5;
 }
 
 /* 4imatges responsive */
@@ -496,6 +511,7 @@ text-align: center;
 
   .galeriaimg img {
     width: 100%;
+    
   }
 }
 
@@ -535,6 +551,13 @@ text-align: center;
   width: 60%;
 }
 
+.colconeix img{
+  width: 180px;
+  padding-top: 50px;
+  z-index: 1;
+
+}
+
 .colconeix h1 {
   color: #fff;
   font-size: 6rem;
@@ -564,7 +587,7 @@ text-align: center;
   height: 270px;
   display: inline-block;
   border-radius: 10px;
-  padding: 15px 25px;
+  padding: 15px 21px;
   cursor: pointer;
   margin: 25px;
   background-position: center;
@@ -607,6 +630,33 @@ text-align: center;
 
 }
 
+.card5 {
+  background-image: url(../card5.jpg);
+}
+
+.card6 {
+  background-image: url(../card6.jpg);
+}
+.card7 {
+  background-image: url(../card7.jpg);
+}
+.card8 {
+  background-image: url(../card8.jpg);
+}
+.card9 {
+  background-image: url(../card9.jpg);
+}
+
+.card10 {
+  background-image: url(../card10.jpg);
+}
+.card11 {
+  background-image: url(../card11.jpg);
+}
+.card12 {
+  background-image: url(../card12.jpg);
+}
+
 
 
 /*Responsive*/
@@ -617,7 +667,17 @@ text-align: center;
   .container .rowconeix {
     display: block;    
     text-align: center;
+   
     
+  }
+
+  .card {
+    padding: 15px 36px;
+  }
+
+  .container {
+    height: fit-content;
+    padding-bottom: 60px;
   }
 
   .colconeix h1, p, a{
@@ -678,6 +738,7 @@ text-align: center;
   .colconeix h1{
     padding: 0;
     padding-top: 50px;
+    font-size: 4rem;
   }
 }
 
@@ -799,22 +860,14 @@ input[type="radio"] {
 }
 
 
-.copy .contentcopy h1 {
-  font-size: 3rem;
-  color: #fff;
-  
 
+.copy .contentcopy img {
+  width: 150px;
 }
 
-.copy .contentcopy h1:hover {
-  -webkit-text-stroke: 0.5px #fff;
-  color: transparent;
-}
 
-.copy .contentcopy .line {
-  margin-bottom: 50px;
-  width: 40%;
-}
+
+
 
 .infolist {
   width: 95%;
@@ -983,6 +1036,7 @@ footer {
   width: 100vw;
   height: 100px;
   display: inline-flex;
+  margin: 0;
 
 }
 
@@ -992,7 +1046,38 @@ footer .logo {
   margin: auto;
 }
 
-footer p{
+footer ul {
   margin: auto;
-  
+  list-style-type: none;
+}
+
+footer li a {
+  text-decoration: none;
+  color: black;
+  margin: 25px;
+}
+
+footer li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width:768px) {
+  footer {
+    display: block;
+    margin: 0;
+    height: 200px;
+  }
+
+  footer .logo {
+    padding-top: 20px;
+  }
+
+  footer li a {
+    margin: 2px;
+  }
+
+  footer ul {
+    padding-top: 30px;
+    text-align: center;
+  }
 }
