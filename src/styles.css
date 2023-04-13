@@ -390,7 +390,7 @@ text-align: center;
 .explora {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../superilla2.jpg) ;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/superilla2.jpg) ;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -553,7 +553,7 @@ text-align: center;
 .container {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../coneixbcn2.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/coneixbcn2.jpg);
   background-size: cover;
   padding-left: 8%;
   padding-right: 8%;
@@ -634,23 +634,24 @@ text-align: center;
   margin-top: 5px;
 }
 .card1 {
-  background-image: url(../card1.jpg);
+  background-image: url(resources/images/card1.jpg);
 }
 
 .card2 {
-  background-image: url(../card2.jpeg);
+  background-image: url(resources/images/card2.jpeg);
 }
 
 .card3 {
-  background-image: url(../card3.jpg);
+  background-image: url(resources/images/card3.jpg);
 }
 
 .card4 {
-  background-image: url(../card4.jpg);
+  background-image: url(resources/images/card4.jpg);
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) !important;
+ transition-duration: 500ms !important;
 }
 .colconeix2 {
   width: 40%;
@@ -658,30 +659,30 @@ text-align: center;
 }
 
 .card5 {
-  background-image: url(../card5.jpg);
+  background-image: url(resources/images/card5.jpg);
 }
 
 .card6 {
-  background-image: url(../card6.jpg);
+  background-image: url(resources/images/card6.jpg);
 }
 .card7 {
-  background-image: url(../card7.jpg);
+  background-image: url(resources/images/card7.jpg);
 }
 .card8 {
-  background-image: url(../card8.jpg);
+  background-image: url(resources/images/card8.jpg);
 }
 .card9 {
-  background-image: url(../card9.jpg);
+  background-image: url(resources/images/card9.jpg);
 }
 
 .card10 {
-  background-image: url(../card10.jpg);
+  background-image: url(resources/images/card10.jpg);
 }
 .card11 {
-  background-image: url(../card11.jpg);
+  background-image: url(resources/images/card11.jpg);
 }
 .card12 {
-  background-image: url(../card12.jpg);
+  background-image: url(resources/images/card12.jpg);
 }
 
 
@@ -877,9 +878,9 @@ input[type="radio"] {
 .copy {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../copyright.jpg) ;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/cr2.png) ;
   background-position: center;
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -889,7 +890,9 @@ input[type="radio"] {
 
 
 .copy .contentcopy img {
-  width: 150px;
+  width: 140px;
+  margin-top: 60vh;
+
 }
 
 
@@ -948,12 +951,19 @@ dl a {
 
 }
 
+/*Responsive info*/
+@media(max-width: 768px) {
+  .copy {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/crmobile.png) ;
+  }
+}
+
 /*detall.html*/
 
 .detall {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../card1.jpg) ;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/sf.jpg) ;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -969,6 +979,10 @@ dl a {
   
   
 
+}
+
+.detall .contentdetall img {
+  width: 650px;
 }
 
 .detall .contentdetall h1:hover {
@@ -1047,6 +1061,59 @@ dl a {
   text-align: left;
 }
 
+ol {
+  counter-reset: li; 
+  list-style: none; 
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  margin-bottom: 3rem;
+}
+
+ol li {
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em .8em;
+  margin: .5em 0 .5em 2.5em;
+  background: rgb(227, 228, 230);
+  color: #444;
+  text-decoration: none;
+  transition: all .3s ease-out;
+  
+}
+
+ol li:hover {background: #DCDDE1;}    
+   
+ol li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -2.5em;
+  top: 50%;
+  margin-top: -1em;
+  background:rgb(240, 93, 80);
+  color: white;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+ol li:after {
+  position: absolute;
+  content: "";
+  border: .5em solid transparent;
+  left: -1em;
+  top: 50%;
+  margin-top: -.5em;
+  transition: all .3s ease-out;
+}
+
+ol li:hover:after {
+  left: -.5em;
+  border-left-color: rgb(240, 93, 80);
+}
+ 
 /*Responsive*/
 
 @media screen and (max-width:600px) {
