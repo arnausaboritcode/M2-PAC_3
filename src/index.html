@@ -7,7 +7,8 @@
     <meta name="description" content="Dones en la ciència">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My First Parcel App</title>
+    <title>Barcelona - Inici</title>
+    <link rel="icon" type="image/x-icon" href="resources/images/LOGO.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -26,7 +27,8 @@
         </video>
         <nav>
           <a href="index.html">
-            <img src="resources/images/logo2bo.png" class="logo">
+            <object data="resources/images/LOGO.svg" class="logo"></object>
+            <h3>Ajuntament de <span>Barcelona</span></h3>
             </a>
           <ul>
             <li><a href="presentacio.html">LA GRAN CIUTAT</a></li>
@@ -71,7 +73,7 @@
 
       <div class="row">
         <div class="col" data-aos="fade-right">
-          <img src="resources/images/granciutat.jpg" alt="">
+          <img srcset="resources/images/granciutat-480w.jpg 480w, resources/images/granciutat-800w.jpg 800w " sizes="(max-width: 600px) 480px, 800px" src="resources/images/granciutat-800w.jpg">
           <h4>La Nostra Ciutat</h4>
           <p>Barcelona, la ciutat de Gaudí i el Mediterrani</p>
           <a href="presentacio.html">Ves-hi</a>
@@ -79,7 +81,7 @@
         </div>
 
         <div class="col" data-aos="fade-left">
-          <img src="resources/images/coneixbcn.jpg" alt="">
+          <img srcset="resources/images/coneixbcn-480w.jpg 480w, resources/images/coneixbcn-800w.jpg 800w " sizes="(max-width: 600px) 480px, 800px" src="resources/images/coneixbcn-800w.jpg" >
           <h4>BCN emblemàtica</h4>
           <p>Descobreix la història i l'art de Barcelona en primera persona</p>
           <a href="coneixbcn.html">Ves-hi</a>
@@ -92,13 +94,14 @@
     
     <footer>
       <div class="logo">
-        <img href="#" src="resources/images/logo2bo.png" class="logo">
+        <object data="resources/images/LOGO.svg" class="logo"> </object>
       </div>
+      <h3>Ajuntament de <span>Barcelona</span></h3>
       <ul class="list">
         <li>
-          <a href="#">Avís legal</a>
-          <a href="#">Contacte</a>
-          <a href="#">Accesibilitat</a>
+          <a href="presentacio.html">Gran Ciutat</a>
+          <a href="coneixbcn.html">Coneix Bcn</a>
+          <a href="info.html">Info</a>
         </li>
       </ul>
       

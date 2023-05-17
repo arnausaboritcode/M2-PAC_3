@@ -16,6 +16,8 @@ body, html {
   overflow-x: hidden;
 }
 
+
+
 /* Header */
 
 
@@ -44,9 +46,17 @@ nav {
 }
 
 nav .logo {
-  width: 180px;
+  width: 130px;
   height: auto;
  
+}
+
+nav a {
+  text-decoration:none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 nav ul li{
@@ -181,16 +191,33 @@ text-align: center;
 
 .content h1 {
   font-size:150px;
-  color:#fff;
+  color: #fff;
   font-weight: 700;
-  transition: 0.5s;
+  transition: background 6s ease-in-out;
+  
+
 
 }
 
 .hero .content h1:hover {
-  -webkit-text-stroke: 2px #fff;
-  color: transparent;
+  background-image:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,13,231,1) 0%, rgba(245,30,2,1) 100%) ;
+  /*-webkit-background-clip: text;*/
+  -webkit-text-fill-color: transparent;
+  
 
+}
+
+.hero object {
+  pointer-events: none;
+}
+
+.hero h3{
+  width: 35%;
+  text-align: justify;
+}
+
+.hero h3 span{
+ color: red;
 }
 
 .content a {
@@ -233,7 +260,7 @@ text-align: center;
   }
 }
 
-@media(min-width: 768px) {
+@media(min-width:981px) {
   .hamburger {
     display: none;
   }
@@ -252,7 +279,7 @@ text-align: center;
   }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 981px) {
 
   .content>h1{
    display: none;
@@ -265,10 +292,14 @@ text-align: center;
 }
 
 
+
+
+
 /* index.html - Portada body*/
 
 .introduction {
   width: 80%;
+max-width: 2000px;
   margin: 80px auto;
 }
 
@@ -291,21 +322,45 @@ text-align: center;
   align-items: center;
   width: 100%;
   justify-content: space-between;
+
+
+
   
 }
 
 .row .col img {
-  width: 80%;
+  width: 100%;
   margin-top: 40px;
-
+  clip-path: polygon(0% 0%, 50% 25%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+  /*clip-path: polygon(0% 0%, 50% 25%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%)*/
+  animation-name:arrow;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:0s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-play-state:running;
+  position: relative;
+  
 }
+
+@keyframes arrow
+	{
+	0%   {bottom:0;}
+	75% {bottom:30px;}
+	100% {bottom:0;}
+	}
 
 .row .col  {
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   box-shadow: 0px 15px 20px -15px rgba(0, 0, 0, 0.1), 0 55px 50px -35px rgba(0, 0, 0, 0.1), 0 85px 60px -25px rgba(0, 0, 0, 0.1),0 -20px 60px -25px rgba(0, 0, 0, 0.1), 20px 0px 60px -25px rgba(0, 0, 0, 0.1), -20px 0px 60px -25px rgba(0, 0, 0, 0.1) ;
+  padding: 5%;
+
   
 }
 
@@ -316,11 +371,17 @@ text-align: center;
   box-shadow: 0 5px 3px -5px rgba(0, 0, 0, 0.3), 0 2px 8px -5px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 
+  
+
 }
 
 .row .col:hover img {
 
   transition: 0.4s ease;
+
+  
+
+
   
   
 }
@@ -421,6 +482,28 @@ text-align: center;
   width: 40%;
 }
 
+.explora .content .logo2 {
+  width: 150px;
+  height: auto;
+
+  animation: rotate 4s infinite;
+  
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-10vw) rotate(-45deg);
+  }
+  50% {
+    transform:  translate(10vw) rotate(450deg);
+  }
+  100% {
+    transform: translate(-10vw) rotate(-45deg);
+  }
+
+
+}
+
 
 /* index.html -Ultima portada responsive*/
 
@@ -430,6 +513,20 @@ text-align: center;
     display: block;
     padding-top: 80px;
    }
+
+   @keyframes rotate {
+    0% {
+      transform: translate(-10vw) rotate(-25deg);
+    }
+    50% {
+      transform:  translate(10vw) rotate(250deg);
+    }
+    100% {
+      transform: translate(-10vw) rotate(-25deg);
+    }
+  
+  
+  }
 
 
 
@@ -483,7 +580,7 @@ text-align: center;
 .galeriaimg img {
   width: 350px;
   margin: 20px;
-  height: 20%;
+  
 
 }
 
@@ -1008,6 +1105,17 @@ dl a {
   margin-top: 1.4rem;
 }
 
+.onzeFebrerContent .images {
+  text-align: center;
+}
+
+.onzeFebrerContent .images img{
+margin-bottom: 30px;
+
+ padding: 0.5%;
+ height: auto;
+
+}
 .onzeFebrerContent p{
   color: rgb(93, 95, 121);
   font-size: 1rem;
@@ -1123,6 +1231,8 @@ ol li:hover:after {
       height: 53vw;
   }
 }
+
+
 /* Footer */
 
 footer {
@@ -1131,13 +1241,14 @@ footer {
   height: 100px;
   display: inline-flex;
   margin: 0;
+  align-items: center;
 
 }
 
 footer .logo {
-  width: 140px;
+  width: 80px;
   height: auto;
-  margin: auto;
+  margin-left: auto;
 }
 
 footer ul {
@@ -1155,23 +1266,40 @@ footer li a:hover {
   text-decoration: underline;
 }
 
+footer h3{
+  text-align: justify;
+  font-size: 16px;
+}
+
+footer h3 span{
+ color: red;
+}
+
 @media screen and (max-width:768px) {
   footer {
     display: block;
     margin: 0;
-    height: 200px;
+    height: 230px;
   }
 
   footer .logo {
-    padding-top: 20px;
+    padding-top: 10px;
+    margin: auto;
   }
 
   footer li a {
     margin: 2px;
+
   }
 
   footer ul {
     padding-top: 30px;
     text-align: center;
+  }
+
+  footer h3{
+    text-align: center;
+    margin-bottom: 20px;
+    
   }
 }
