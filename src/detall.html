@@ -7,7 +7,8 @@
     <meta name="description" content="Dones en la ciència">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My First Parcel App</title>
+    <title>Barcelona - Sagrada Família</title>
+    <link rel="icon" type="image/x-icon" href="resources/images/LOGO.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -24,8 +25,9 @@
     
         <nav>
           <a href="index.html">
-          <img src="resources/images/logo2bo.png" class="logo">
-          </a>
+            <object data="resources/images/LOGO.svg" class="logo"></object>
+            <h3>Ajuntament de <span>Barcelona</span></h3>
+            </a>
           <ul>
             <li><a href="presentacio.html">LA GRAN CIUTAT</a></li>
             <li><a href="coneixbcn.html">CONEIX BCN</a></li>
@@ -57,7 +59,11 @@
 
       <section class="detall">
         <div class="contentdetall">
-          <img src="resources/images/modelsf.png" data-aos="zoom-in" data-aos-duration="1200">
+          <picture>
+            <source media="(max-width: 899px)" srcset="resources/images/sgbg2-1000w.jpg?as=webp" type="image/webp" />
+            <source media="(min-width: 900px)" srcset="resources/images/sgbg2-1920w.jpg?as=webp" type="image/webp"/>
+            <img src="resources/images/sgbg2-1920w.jpg">
+          </picture>
         </div>
         </section>
 
@@ -90,13 +96,13 @@
         <div class="images">
           <picture>
             <source media="(max-width: 799px)" srcset="resources/images/vitrals-230w.jpg?as=webp" type="image/webp" />
-            <source media="(min-width: 800px)" srcset="resources/images/vitrals-550w.jpg"/>
+            <source media="(min-width: 800px)" srcset="resources/images/vitrals-550w.jpg?as=webp" type="image/webp"/>
             <img src="resources/images/vitrals-550w.jpg">
           </picture>
 
           <picture>
-            <source media="(max-width: 799px)" srcset="resources/images/fachada-230w.jpg">
-            <source media="(min-width: 800px)" srcset="resources/images/fachada-550w.jpg">
+            <source media="(max-width: 799px)" srcset="resources/images/fachada-230w.jpg?as=webp" type="image/webp">
+            <source media="(min-width: 800px)" srcset="resources/images/fachada-550w.jpg?as=webp" type="image/webp">
             <img src="resources/images/fachada-550w.jpg">
           </picture>
         </div>
@@ -122,14 +128,16 @@
 
     <footer>
       <div class="logo">
-        <img href="#" src="resources/images/logo2bo.png" class="logo">
+        <object data="resources/images/LOGO.svg" class="logo"> </object>
+        <h3>Ajuntament de <span>Barcelona</span></h3>
       </div>
+    
       <ul class="list">
-        <li>
-          <a href="#">Avís legal</a>
-          <a href="#">Contacte</a>
-          <a href="#">Accesibilitat</a>
-        </li>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="presentacio.html">Gran Ciutat</a></li>
+          <li><a href="coneixbcn.html">Coneix Bcn</a></li>
+         <li><a href="info.html">Info</a></li> 
+      
       </ul>
       
       

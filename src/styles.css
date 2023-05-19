@@ -193,30 +193,55 @@ text-align: center;
   font-size:150px;
   color: #fff;
   font-weight: 700;
-  transition: background 6s ease-in-out;
+  transition: font-size 0.5s cubic-bezier(0.67, -0.51, 0.42, 1.43);
   
 
 
 }
+
+.content .subcontent{
+  height:250px;
+  overflow:hidden;
+  position:relative;
+}
+
+
 
 .hero .content h1:hover {
-  background-image:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,13,231,1) 0%, rgba(245,30,2,1) 100%) ;
-  /*-webkit-background-clip: text;*/
-  -webkit-text-fill-color: transparent;
+  
+  font-size: 200px;
+  cursor:none;
+
+
   
 
 }
 
-.hero object {
+.content img {
+  width: 200px;
+  position: absolute;
+  margin-top: -297px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s , opacity 0.5s cubic-bezier(0.67, -0.51, 0.42, 1.43);
+  
+}
+
+.content h1:hover + img{
+  visibility: visible;
+  opacity: 1;
+}
+
+nav object {
   pointer-events: none;
 }
 
-.hero h3{
+nav h3{
   width: 35%;
   text-align: justify;
 }
 
-.hero h3 span{
+nav h3 span{
  color: red;
 }
 
@@ -274,9 +299,10 @@ text-align: center;
   }
 
 
-  .content h1+h1{
+  .content h1+img+h1{
     display: none;
   }
+  
 }
 
 @media(max-width: 981px) {
@@ -285,10 +311,22 @@ text-align: center;
    display: none;
   }
 
-  .content h1+h1{
+  .content h1+img+h1{
     display:block;
   }
+
+  .content img+h1:hover{
+    font-size: 150px!important;
+    cursor: default!important;
+  }
  
+}
+
+@media(max-width: 450px) {
+  nav h3 {
+    display: none;
+
+  }
 }
 
 
@@ -665,18 +703,43 @@ max-width: 2000px;
 
 .colconeix {
   width: 60%;
+  
+  
 }
 
-.colconeix img{
-  width: 180px;
-  padding-top: 50px;
-  z-index: 1;
+.colconeix>object{
+  width: 200px;
+  position: absolute;
+  
+}
+
+.colconeix object + object {
+  width: 200px;
+  animation: fly 2s cubic-bezier(0,.34,.17,1.02);
+  position: absolute;
+
+
+ 
 
 }
+
+@keyframes fly {
+  0%,50% {
+    opacity: 0;
+    transform: translateY(-700px);
+  }
+ 50%,100% {
+  opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
 
 .colconeix h1 {
   color: #fff;
   font-size: 6rem;
+  margin-top: 50px;
 
 }
 
@@ -731,7 +794,7 @@ max-width: 2000px;
   margin-top: 5px;
 }
 .card1 {
-  background-image: url(resources/images/card1.jpg);
+  background-image: url(resources/images/sgbg2-1920w.jpg);
 }
 
 .card2 {
@@ -752,6 +815,7 @@ max-width: 2000px;
 }
 .colconeix2 {
   width: 40%;
+  margin-top: 5%;
 
 }
 
@@ -830,7 +894,15 @@ max-width: 2000px;
 
   .colconeix {
     padding-top: 25%;
-    margin-bottom: 30px;
+    margin-bottom: 216px;
+  }
+
+  .colconeix object {
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    
   }
 
  
@@ -865,6 +937,7 @@ max-width: 2000px;
     padding-top: 50px;
     font-size: 4rem;
   }
+
 }
 
   
@@ -1060,7 +1133,7 @@ dl a {
 .detall {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/sf.jpg) ;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/sgbg2-1920w.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1079,7 +1152,11 @@ dl a {
 }
 
 .detall .contentdetall img {
-  width: 650px;
+margin-top: 15%;
+width: 60vw;
+max-width: 100%;
+
+
 }
 
 .detall .contentdetall h1:hover {
@@ -1232,6 +1309,12 @@ ol li:hover:after {
   }
 }
 
+@media screen and (max-width:900px) {
+  .detall .contentdetall img {
+    width: 80vw;
+  }
+}
+
 
 /* Footer */
 
@@ -1240,20 +1323,28 @@ footer {
   width: 100vw;
   height: 100px;
   display: inline-flex;
-  margin: 0;
   align-items: center;
+  justify-content:space-evenly;
 
 }
 
 footer .logo {
+ 
+  display: inline-flex;
+  align-items: center;
+  
+}
+
+footer object {
   width: 80px;
   height: auto;
-  margin-left: auto;
 }
 
 footer ul {
-  margin: auto;
   list-style-type: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer li a {
@@ -1267,7 +1358,6 @@ footer li a:hover {
 }
 
 footer h3{
-  text-align: justify;
   font-size: 16px;
 }
 
@@ -1275,24 +1365,22 @@ footer h3 span{
  color: red;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:870px) {
   footer {
     display: block;
     margin: 0;
-    height: 230px;
+    height: 250px;
   }
 
   footer .logo {
+    display: block;
     padding-top: 10px;
     margin: auto;
-  }
-
-  footer li a {
-    margin: 2px;
-
+   
   }
 
   footer ul {
+    width: 100vw;
     padding-top: 30px;
     text-align: center;
   }
@@ -1301,5 +1389,19 @@ footer h3 span{
     text-align: center;
     margin-bottom: 20px;
     
+  }
+}
+
+@media screen and (max-width:575px) {
+
+  footer {
+    height: 350px;
+  }
+  footer ul {
+    display: block;
+  }
+
+  footer li{
+    padding: 10px;
   }
 }

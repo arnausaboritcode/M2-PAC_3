@@ -10,3 +10,4 @@ hamburger.addEventListener('click', function () {
 
 /*Inicialitzar llibreria AOS*/
 AOS.init();
+
