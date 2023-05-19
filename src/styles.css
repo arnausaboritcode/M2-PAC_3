@@ -147,10 +147,11 @@ nav ul {
   min-height: 100vh;
   display: block;
   z-index: 1;
-  padding-top: 35vh;
+  padding-top: 15vh;
   background-color: rgba(0, 0, 0, 0.95);
   transition: 0.4s;
   list-style-type: none;
+
 }
 
 .mobile-nav.is-active {
@@ -217,7 +218,7 @@ text-align: center;
 
 }
 
-.content img {
+.hero .content object {
   width: 200px;
   position: absolute;
   margin-top: -297px;
@@ -227,7 +228,7 @@ text-align: center;
   
 }
 
-.content h1:hover + img{
+.content h1:hover + object{
   visibility: visible;
   opacity: 1;
 }
@@ -236,6 +237,9 @@ nav object {
   pointer-events: none;
 }
 
+.mobile-nav object {
+  pointer-events: none;
+}
 nav h3{
   width: 35%;
   text-align: justify;
@@ -299,7 +303,7 @@ nav h3 span{
   }
 
 
-  .content h1+img+h1{
+  .content h1+object+h1{
     display: none;
   }
   
@@ -311,11 +315,11 @@ nav h3 span{
    display: none;
   }
 
-  .content h1+img+h1{
+  .content h1+object+h1{
     display:block;
   }
 
-  .content img+h1:hover{
+  .content object+h1:hover{
     font-size: 150px!important;
     cursor: default!important;
   }
@@ -893,7 +897,7 @@ max-width: 2000px;
   }
 
   .colconeix {
-    padding-top: 25%;
+    padding-top: 10%;
     margin-bottom: 216px;
   }
 
@@ -924,6 +928,10 @@ max-width: 2000px;
     height: fit-content;
    }
 
+   .colconeix {
+    padding-top: 25%;
+  }
+
 
 }
 
@@ -937,6 +945,8 @@ max-width: 2000px;
     padding-top: 50px;
     font-size: 4rem;
   }
+
+  
 
 }
 
