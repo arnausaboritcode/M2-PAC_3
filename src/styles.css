@@ -784,9 +784,10 @@ max-width: 2000px;
   left: 0;
   top: 0;
 }
-.card h5 {
+.card h2 {
   color: #fff;
   text-shadow: 0 0 5px #999;
+  font-size: 14px;
 }
 
 .card p {
