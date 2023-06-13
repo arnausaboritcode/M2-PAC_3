@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="../node_modules/aos/dist/aos.css" />
-    <script src="../node_modules/aos/dist/aos.js"></script> 
-    <script type="module" src="app.js"></script>
+    <script defer src="../node_modules/aos/dist/aos.js"></script> 
+    <script type="module" defer src="app.js"></script>
   </head>
 
   <body>
@@ -74,7 +74,7 @@
 
       <div class="row">
         <div class="col" data-aos="fade-right">
-          <img srcset="resources/images/granciutat-480w.jpg?as=webp 480w, resources/images/granciutat-800w.jpg?as=webp 800w " type="image/webp" sizes="(max-width: 600px) 480px, 800px" src="resources/images/granciutat-800w.jpg"  alt="Superilla">
+          <img srcset="resources/images/granciutat-480w.jpg?as=webp 480w, resources/images/granciutat-800w.jpg?as=webp 800w " type="image/webp" sizes="(max-width: 600px) 480px, 800px" src="resources/images/granciutat-800w.jpg" loading="lazy" width="800" height="600"  alt="Superilla">
           <h3>La Nostra Ciutat</h3>
           <p>Barcelona, la ciutat de Gaudí i el Mediterrani</p>
           <a href="presentacio.html">Ves-hi</a>
@@ -82,7 +82,7 @@
         </div>
 
         <div class="col" data-aos="fade-left">
-          <img srcset="resources/images/coneixbcn-480w.jpg?as=webp 480w, resources/images/coneixbcn-800w.jpg?as=webp 800w" type="image/webp" sizes="(max-width: 600px) 480px, 800px" src="resources/images/coneixbcn-800w.jpg"  alt="Autobús turístic" >
+          <img srcset="resources/images/coneixbcn-480w.jpg?as=webp 480w, resources/images/coneixbcn-800w.jpg?as=webp 800w" type="image/webp" sizes="(max-width: 600px) 480px, 800px" src="resources/images/coneixbcn-800w.jpg"  loading="lazy" width="800" height="600" alt="Autobús turístic" >
           <h3>BCN emblemàtica</h3>
           <p>Reconeix la història i l'art en primera persona</p>
           <a href="coneixbcn.html">Ves-hi</a>
