@@ -372,6 +372,7 @@ max-width: 2000px;
 
 .row .col img {
   width: 100%;
+  height: auto;
   margin-top: 40px;
   clip-path: polygon(0% 0%, 50% 25%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
   /*clip-path: polygon(0% 0%, 50% 25%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
@@ -619,6 +620,7 @@ max-width: 2000px;
 
 .galeriaimg img {
   width: 350px;
+  height: auto;
   margin: 20px;
   
 
@@ -1163,6 +1165,7 @@ dl a {
 .detall .contentdetall img {
 margin-top: 15%;
 width: 60vw;
+height: auto;
 max-width: 100%;
 
 
