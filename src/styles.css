@@ -249,6 +249,9 @@ nav h3 span{
  color: red;
 }
 
+.content {
+  z-index: 2;
+}
 .content a {
   text-decoration: none;
   display: inline-block;
@@ -265,8 +268,14 @@ nav h3 span{
   background-color: red;
   
 }
-
+.color {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
 .back-video {
+  
   position: absolute;
   right: 0;
   bottom: 0;
