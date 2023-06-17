@@ -249,6 +249,13 @@ nav h3 span{
  color: red;
 }
 
+.mobile-nav {
+  z-index: 3;
+}
+
+.hamburger {
+  z-index: 4;
+}
 .content {
   z-index: 2;
 }
