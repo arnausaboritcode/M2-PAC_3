@@ -1175,6 +1175,7 @@ dl a {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/sgbg2-1920w.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), -webkit-image-set(url(resources/images/sgbg2-1920wwebp.webp));
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
