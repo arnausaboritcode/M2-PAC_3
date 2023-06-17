@@ -1089,7 +1089,7 @@ input[type="radio"] {
 .copy {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/cr2.png) ;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/cr2.png);
   background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
@@ -1099,13 +1099,29 @@ input[type="radio"] {
 }
 
 
-
 .copy .contentcopy img {
   width: 140px;
   margin-top: 60vh;
 
 }
 
+.copy .contentcopy h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 6rem;
+  margin: 30px;
+  margin-bottom: 0;
+  
+
+}
+
+.copy .contentcopy p{
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
 
 
 
