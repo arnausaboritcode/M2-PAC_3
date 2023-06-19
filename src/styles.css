@@ -1090,7 +1090,7 @@ input[type="radio"] {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/cr2.png);
- 
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), -webkit-image-set(url(resources/images/cr2webp.webp));
   background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
@@ -1183,7 +1183,7 @@ dl a {
 @media(max-width: 768px) {
   .copy {
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(resources/images/crmobile.png) ;
-    
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), -webkit-image-set(url(resources/images/crmobilewebp.webp));
   }
 }
 
